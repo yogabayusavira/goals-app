@@ -34,7 +34,7 @@ The Windows installer and executable are generated under `src-tauri/target/relea
 
 ## Storage
 
-During development, Focus Board reads and writes `goals.json` in the app data directory managed by Tauri.
+During development, Goals App reads and writes `goals.json` in the app data directory managed by Tauri.
 
 The Rust storage layer is isolated in `src-tauri/src/storage.rs`. To store `goals.json` next to the packaged executable later, update `goals_file_path` in that file to resolve from the executable directory instead of the app data directory.
 

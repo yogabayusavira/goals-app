@@ -1,6 +1,6 @@
 import type { FocusBoardData } from "./types";
 
-const STORAGE_KEY = "focus_board_data";
+const STORAGE_KEY = "goals_app_data";
 
 const DEFAULT_BOARD: FocusBoardData = {
   title: "MVP by Monday",

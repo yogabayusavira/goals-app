@@ -19,5 +19,5 @@ pub fn run() {
         .plugin(tauri_plugin_opener::init())
         .invoke_handler(tauri::generate_handler![load_board, save_board])
         .run(tauri::generate_context!())
-        .expect("error while running Focus Board");
+        .expect("error while running Goals App");
 }

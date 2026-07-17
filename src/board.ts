@@ -14,7 +14,7 @@ function getElement<T extends HTMLElement>(selector: string): T {
   const element = document.querySelector<T>(selector);
 
   if (!element) {
-    throw new Error(`Focus Board markup is missing ${selector}.`);
+    throw new Error(`Goals App markup is missing ${selector}.`);
   }
 
   return element;
