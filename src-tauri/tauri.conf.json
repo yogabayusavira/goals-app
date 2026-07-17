@@ -1,8 +1,8 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "Focus Board",
-  "version": "1.0.0",
-  "identifier": "com.focusboard.app",
+  "productName": "Goals App",
+  "version": "0.8.0",
+  "identifier": "com.goalsapp.app",
   "build": {
     "beforeDevCommand": "npm run dev",
     "devUrl": "http://127.0.0.1:1420",
@@ -12,7 +12,7 @@
   "app": {
     "windows": [
       {
-        "title": "Focus Board",
+        "title": "Goals App",
         "width": 340,
         "height": 640,
         "center": true,
@@ -31,6 +31,13 @@
   },
   "bundle": {
     "active": true,
-    "targets": "all"
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
   }
 }

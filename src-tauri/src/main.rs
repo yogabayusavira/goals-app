@@ -1,3 +1,3 @@
 fn main() {
-    focus_board_lib::run();
+    goals_app_lib::run();
 }
