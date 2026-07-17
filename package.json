@@ -1,0 +1,23 @@
+{
+  "name": "focus-board",
+  "version": "1.0.0",
+  "description": "A tiny always-on-top streaming checklist built with Tauri.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.0.18",
+    "@tauri-apps/api": "2.0.0",
+    "lucide": "^0.468.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "2.0.0",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11"
+  }
+}

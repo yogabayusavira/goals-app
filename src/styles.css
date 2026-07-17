@@ -1,0 +1,344 @@
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("@fontsource/inter/files/inter-latin-400-normal.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("@fontsource/inter/files/inter-latin-500-normal.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("@fontsource/inter/files/inter-latin-600-normal.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("@fontsource/inter/files/inter-latin-700-normal.woff") format("woff");
+}
+
+:root {
+  color: #f7f7fb;
+  background: #0c0d12;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #0c0d12;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+.shell {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background: #0c0d12;
+}
+
+.board {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  overflow: hidden;
+  color: #f8f8fb;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(92, 124, 250, 0.22), transparent 34%),
+    radial-gradient(circle at 100% 22%, rgba(34, 211, 238, 0.12), transparent 30%),
+    #0c0d12;
+}
+
+.board__header {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 auto;
+}
+
+.title-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.title-mark {
+  display: grid;
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  color: #ffffff;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.04)),
+    rgba(255, 255, 255, 0.04);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+.heading {
+  min-width: 0;
+  flex: 1;
+}
+
+.editable {
+  width: 100%;
+  margin: 0;
+  cursor: text;
+}
+
+h1.editable {
+  min-height: 36px;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.08;
+}
+
+p.editable {
+  min-height: 22px;
+  margin-top: 6px;
+  color: rgba(248, 248, 251, 0.62);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.inline-edit {
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  color: #ffffff;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+.inline-edit--title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.08;
+}
+
+.inline-edit--subtitle {
+  margin-top: 6px;
+  color: rgba(248, 248, 251, 0.78);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.progress {
+  height: 10px;
+  margin-top: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.065);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.24);
+}
+
+.progress__bar {
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #8bffca, #73a7ff 52%, #d9b8ff);
+  box-shadow: 0 0 18px rgba(115, 167, 255, 0.34);
+  transition: width 180ms ease;
+}
+
+.progress-text {
+  margin-top: 9px;
+  color: rgba(248, 248, 251, 0.52);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.goal-list {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 0;
+  margin: 18px -4px 16px;
+  padding: 2px 4px;
+  overflow: hidden auto;
+  scrollbar-width: none;
+}
+
+.goal-list::-webkit-scrollbar {
+  display: none;
+}
+
+.goal {
+  display: grid;
+  grid-template-columns: 22px 24px minmax(0, 1fr) 24px;
+  gap: 8px;
+  align-items: center;
+  min-height: 44px;
+  padding: 9px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.052);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 6px 18px rgba(0, 0, 0, 0.12);
+  transition:
+    border-color 140ms ease,
+    background 140ms ease,
+    opacity 140ms ease,
+    transform 140ms ease;
+}
+
+.goal:hover,
+.goal--over {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.084);
+}
+
+.goal--dragging {
+  opacity: 0.44;
+  transform: scale(0.985);
+}
+
+.goal--complete .goal__text {
+  color: rgba(248, 248, 251, 0.44);
+  text-decoration: line-through;
+}
+
+.goal__handle,
+.goal__check,
+.goal__delete {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  place-items: center;
+  border: 0;
+  background: transparent;
+}
+
+.goal__handle {
+  width: 22px;
+  color: rgba(248, 248, 251, 0.25);
+  cursor: grab;
+}
+
+.goal:active .goal__handle {
+  cursor: grabbing;
+}
+
+.goal__check {
+  color: #07110d;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.goal__check[aria-pressed="true"] {
+  color: #07110d;
+  border-color: rgba(141, 255, 202, 0.56);
+  background: linear-gradient(135deg, #8bffca, #73a7ff);
+}
+
+.goal__text {
+  min-width: 0;
+  color: rgba(248, 248, 251, 0.86);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.goal__delete {
+  color: rgba(248, 248, 251, 0.38);
+  cursor: pointer;
+  opacity: 0;
+  transition:
+    color 140ms ease,
+    opacity 140ms ease;
+}
+
+.goal:hover .goal__delete,
+.goal__delete:focus-visible {
+  opacity: 1;
+}
+
+.goal__delete:hover {
+  color: #ff9a9a;
+}
+
+.add-goal {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 9px;
+  align-items: center;
+  height: 46px;
+  padding: 0 12px;
+  color: rgba(248, 248, 251, 0.44);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.045);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.add-goal:focus-within {
+  color: rgba(248, 248, 251, 0.72);
+  border-color: rgba(115, 167, 255, 0.38);
+  background: rgba(255, 255, 255, 0.068);
+}
+
+.add-goal input {
+  min-width: 0;
+  flex: 1;
+  color: #ffffff;
+  border: 0;
+  outline: none;
+  background: transparent;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.add-goal input::placeholder {
+  color: rgba(248, 248, 251, 0.38);
+}

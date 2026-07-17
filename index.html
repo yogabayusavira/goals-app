@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Focus Board</title>
+  </head>
+  <body>
+    <main id="app" class="shell">
+      <section class="board" aria-label="Focus Board">
+        <header class="board__header">
+          <div class="title-row">
+            <div class="title-mark">
+              <i data-lucide="target" aria-hidden="true"></i>
+            </div>
+            <div class="heading">
+              <h1 id="title" class="editable" tabindex="0" data-field="title">MVP by Monday</h1>
+              <p id="subtitle" class="editable" tabindex="0" data-field="subtitle">Cold Calling App</p>
+            </div>
+          </div>
+          <div class="progress" aria-label="Goal progress">
+            <div id="progressBar" class="progress__bar"></div>
+          </div>
+          <div id="progressText" class="progress-text">0% Complete</div>
+        </header>
+
+        <div id="goalList" class="goal-list" aria-label="Goals"></div>
+
+        <form id="addGoalForm" class="add-goal" autocomplete="off">
+          <i data-lucide="circle-plus" aria-hidden="true"></i>
+          <input id="goalInput" name="goal" type="text" placeholder="Add goal..." maxlength="120" />
+        </form>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
