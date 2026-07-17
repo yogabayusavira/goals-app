@@ -163,7 +163,7 @@ function bindAddGoal(): void {
 }
 
 function bindEditable(element: HTMLElement, field: "title" | "subtitle"): void {
-  element.addEventListener("dblclick", () => beginEdit(element, field));
+  element.addEventListener("click", () => beginEdit(element, field));
   element.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
       event.preventDefault();

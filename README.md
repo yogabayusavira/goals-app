@@ -1,6 +1,8 @@
-# Focus Board
+# Goals App
 
-Focus Board is a tiny floating checklist window for streaming overlays. It is built with Tauri v2, Vite, TypeScript, vanilla HTML/CSS/TypeScript, and a minimal Rust backend.
+Goals App is a lightweight, local-first checklist app designed to be your perfect streaming partner. It runs as a tiny floating window that fits beautifully on any streaming overlay or desktop workspace.
+
+Built with Tauri v2, Vite, TypeScript, vanilla HTML/CSS/TypeScript, and a minimal Rust backend.
 
 It works offline, stores data in `goals.json`, and does not use localStorage, databases, cloud services, authentication, or telemetry.
 
@@ -55,9 +57,12 @@ The stored file shape is:
 
 ## Controls
 
-- Double-click the title or subtitle to edit.
+- Click the title or subtitle to edit.
 - Press Enter or blur the field to save text edits.
 - Click a checkbox to complete a goal.
 - Drag the handle to reorder goals.
 - Hover a goal and click `X` to delete.
 - Type in the bottom field and press Enter to add a goal.
+
+## Future Roadmap
+Once the core MVP is complete, we plan to explore adding pre-built themes, or even custom user-defined styling and colors.
