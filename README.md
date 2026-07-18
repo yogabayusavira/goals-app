@@ -12,67 +12,53 @@
 
 Goals App is a lightweight, local-first checklist app designed to be your perfect streaming partner. It runs as a tiny floating window that fits beautifully on any streaming overlay or desktop workspace.
 
-Built with Tauri v2, Vite, TypeScript, vanilla HTML/CSS/TypeScript, and a minimal Rust backend.
+It works offline, stores data locally, and does not use databases, cloud services, authentication, or telemetry.
 
-It works offline, stores data in `goals.json`, and does not use localStorage, databases, cloud services, authentication, or telemetry.
+## Download & Install
 
-## Requirements
+Go to the [Releases](https://github.com/yogabayusavira/goals-app/releases) page and download the latest installer:
 
-- Node.js 18 or newer
-- Rust stable
-- Windows WebView2 Runtime
+- **`Goals App_x.x.x_x64-setup.exe`** — Recommended standard installer (NSIS)
+- **`Goals App_x.x.x_x64_en-US.msi`** — Alternative MSI package
 
-## Install
+Run the installer and follow the setup wizard. No Node.js or Rust required.
 
-```bash
-npm install
-```
-
-## Run in development
-
-```bash
-npm run tauri dev
-```
-
-## Build for Windows
-
-```bash
-npm run tauri build
-```
-
-The Windows installer and executable are generated under `src-tauri/target/release/bundle`.
-
-## Storage
-
-During development, Goals App reads and writes `goals.json` in the app data directory managed by Tauri.
-
-The Rust storage layer is isolated in `src-tauri/src/storage.rs`. To store `goals.json` next to the packaged executable later, update `goals_file_path` in that file to resolve from the executable directory instead of the app data directory.
-
-The stored file shape is:
-
-```json
-{
-  "title": "MVP by Monday",
-  "subtitle": "Cold Calling App",
-  "goals": [
-    {
-      "id": "goal-1",
-      "text": "Finalize user flow",
-      "completed": false,
-      "order": 0
-    }
-  ]
-}
-```
+> **Note:** Windows may require [WebView2 Runtime](https://developer.microsoft.com/en-us/microsoft-edge/webview2/) to be installed. Most up-to-date Windows 10/11 systems already have it.
 
 ## Controls
 
-- Click the title or subtitle to edit.
-- Press Enter or blur the field to save text edits.
-- Click a checkbox to complete a goal.
-- Drag the handle to reorder goals.
-- Hover a goal and click `X` to delete.
-- Type in the bottom field and press Enter to add a goal.
+- **Click** the title or subtitle to edit it. Press `Enter` or click away to save.
+- **Type** in the bottom input field and press `Enter` to add a goal.
+- **Click** the checkbox next to a goal to mark it complete.
+- **Drag** the handle to reorder goals.
+- **Hover** a goal and click `✕` to delete it.
+
+## Storage
+
+Your data is saved automatically to `goals.json` in your system's AppData directory:
+
+```
+C:\Users\<YourName>\AppData\Roaming\com.goalsapp.app\goals.json
+```
 
 ## Future Roadmap
+
 Once the core MVP is complete, we plan to explore adding pre-built themes, or even custom user-defined styling and colors.
+
+---
+
+## Building from Source
+
+Only needed if you want to contribute or build the app yourself.
+
+**Requirements:**
+- Node.js 18 or newer
+- Rust (stable)
+
+```bash
+npm install
+npm run tauri dev    # development
+npm run tauri build  # production build
+```
+
+The installer outputs to `src-tauri/target/release/bundle/`.
