@@ -1,5 +1,15 @@
 # Goals App
 
+<p align="center">
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript" alt="TypeScript"/>
+  <img src="https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust" alt="Rust"/>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5" alt="HTML5"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3" alt="CSS3"/>
+  <img src="https://img.shields.io/badge/Tauri-FFC131?style=for-the-badge&logo=tauri&logoColor=black" alt="Tauri"/>
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite" alt="Vite"/>
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs" alt="Node.js"/>
+</p>
+
 Goals App is a lightweight, local-first checklist app designed to be your perfect streaming partner. It runs as a tiny floating window that fits beautifully on any streaming overlay or desktop workspace.
 
 Built with Tauri v2, Vite, TypeScript, vanilla HTML/CSS/TypeScript, and a minimal Rust backend.
