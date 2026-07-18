@@ -52,6 +52,22 @@ You can back this file up or copy it to another machine at any time.
 
 ---
 
+## 📺 Using with OBS (Streaming Overlay)
+
+**Goals App** is designed to sit neatly in your stream as a floating overlay. Here's how to set it up:
+
+1. **Open Goals App** — make sure it's running and visible on your screen.
+2. **In OBS**, go to the **Sources** panel and click **`+`**.
+3. Select **Window Capture**.
+4. Name the source (e.g. `Goals App`) and click **OK**.
+5. In the **Window** dropdown, select **`Goals App`** from the list of open windows.
+6. Click **OK**.
+7. **Resize and position** the capture in your OBS scene to where you want it on stream.
+
+> **Tip:** Right-click the source in OBS → **Filters** → add a **Color Key** or **Chroma Key** filter if you want to remove the app background and show only the checklist content.
+
+---
+
 ## 🗺️ Future Roadmap
 
 - Pre-built themes
