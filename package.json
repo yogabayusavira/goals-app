@@ -1,6 +1,6 @@
 {
   "name": "goals-app",
-  "version": "0.8.9",
+  "version": "0.8.10",
   "description": "A beautiful goals tracking app built with Tauri + Vite + TypeScript.",
   "private": true,
   "type": "module",
