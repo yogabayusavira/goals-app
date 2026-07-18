@@ -1332,7 +1332,7 @@ checksum = "0cc23270f6e1808e30a928bdc84dea0b9b4136a8bc82338574f23baf47bbd280"
 
 [[package]]
 name = "goals-app"
-version = "0.8.9"
+version = "0.8.10"
 dependencies = [
  "serde",
  "serde_json",
