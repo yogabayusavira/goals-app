@@ -66,6 +66,8 @@ You can back this file up or copy it to another machine at any time.
 
 > **Tip:** Right-click the source in OBS → **Filters** → add a **Color Key** or **Chroma Key** filter if you want to remove the app background and show only the checklist content.
 
+> **Tip:** You can resize the Goals App window directly on your desktop — OBS will automatically reflect the new size in the capture. No need to adjust the source in OBS manually.
+
 ---
 
 ## 🗺️ Future Roadmap
